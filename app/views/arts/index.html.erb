@@ -1,0 +1,62 @@
+
+<div class="col-9 d-flex justify-content-end align-items-center">
+        <a class="text-muted" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+        </a>
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'New Art', new_art_path %>
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'New Artist', new_artist_path %>
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'New Type', new_type_path %>
+      </div>
+
+
+<div class="container">
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Tristesse</h1>
+      <p class="lead my-3">La tristesse, le mal-être des courants entiers sont dédiés à ces émotions. Des émotions essentielles à l'humain pour comprendre ce qu'il est lui et ce que peuvent ressentir les autres. Des émotions symbolisant la faiblesse de l'humain, la facilité de la douleur à s'immiscer dans son coeur./p>
+    </div>
+  </div>
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Espoir</h1>
+      <p class="lead my-3">L'espoir, le retour à la vie, létincelle de bonheur aperçue au loin, cette émotion qui permet à l'Homme de s'accrocher et de continuer malgré la difficulté, qui a permis de grande chose dans l'histoire de l'humanité.</p>
+    </div>
+  </div>
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Bonheur</h1>
+      <p class="lead my-3">Le bonheur, la joie,.. parmi les premières interactions d'un enfant avec son entourage, il y a le sourire. Le sourire, expression de communication très contagieuse et si souvent oubliée pourtant elle apporte beaucoup, bien plus que ce que nous pensons... </p>
+    </div>
+  </div>
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Oeuvres</h1>
+
+
+  <div class="row mb-2">
+    <% @arts.each do |art| %>
+
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0"><%= art.title %></h3>
+          <div class="mb-1 text-muted"><%= art.artist%>
+          </div>
+          <p><%= link_to 'Show', art %></p>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+        <img src='<%= art.picture %>' class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></img>
+        </div>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+
+</div>
