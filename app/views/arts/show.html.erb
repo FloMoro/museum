@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Titre:</strong>
   <%= @art.title %>
 </p>
 
@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Picture:</strong>
+  <strong>Image:</strong>
   <img scr='<%= @art.picture %>'>
 </p>
 
@@ -21,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Artist:</strong>
+  <strong>Artiste:</strong>
   <%= @art.artist %>
 </p>
 
@@ -35,5 +35,5 @@
   <%= @art.emotion %>
 </p>
 
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
+<%= link_to 'Modifier', edit_art_path(@art) %> |
+<%= link_to 'Retour', arts_path %>
