@@ -4,16 +4,72 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :date %>
-    <%= f.input :picture %>
-    <%= f.input :description %>
-    <%= f.association :artist %>
-    <%= f.association :type %>
-    <%= f.association :emotion %>
+
+
+<div class="col-md-8 order-md-1">
+      <form class="needs-validation" novalidate="">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="title"><%= f.input :title %></label>
+            <div class="invalid-feedback">
+              Le titre est obligatoire.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName"><%= f.input :date %></label>
+            <div class="invalid-feedback">
+              La date est obligatoire.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username"><%= f.input :picture %></label>
+          <div class="input-group">
+            <div class="invalid-feedback">
+              Une image est obligatoire.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email"><%= f.input :description %></label>
+          <div class="invalid-feedback">
+              Une descritpion est obligatoire.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address"><%= f.association :artist %></label>
+          <div class="invalid-feedback">
+              L'artiste est obligatoire.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address2"><%= f.association :type %></label>
+          <div class="invalid-feedback">
+              Le type est obligatoire.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="zip"><%= f.association :emotion %></label>
+            <div class="invalid-feedback">
+              Une émotion est obligatoire.
+            </div>
+          </div>
+        </div>
+
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="col-md-10 mb-3">
+    <div class="form-actions">
+        <button class="btn btn-sm btn-outline-secondary" ><%= f.button :submit %></button>
+    </div>
   </div>
-<% end %>
+
+
+    <% end %>
