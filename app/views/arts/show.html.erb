@@ -12,7 +12,7 @@
 
 <p>
   <strong>Image:</strong>
-  <img scr='<%= @art.picture %>'>
+  <a> <%= @art.picture %> </a>
 </p>
 
 <p>
@@ -35,5 +35,21 @@
   <%= @art.emotion %>
 </p>
 
-<%= link_to 'Modifier', edit_art_path(@art) %> |
-<%= link_to 'Retour', arts_path %>
+
+
+  <div class="col-md-10 mb-3">
+    <div class="form-actions">
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Modifier', edit_art_path(@art) %></button>
+    </div>
+  </div>
+
+  <div class="col-md-10 mb-3">
+    <div class="form-actions">
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Retour', arts_path %></button>
+    </div>
+  </div>
+
+
+ |
+
+

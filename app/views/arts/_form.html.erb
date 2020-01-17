@@ -1,4 +1,6 @@
 
+
+
 <%= simple_form_for(@art) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -9,7 +11,7 @@
 <div class="col-md-8 order-md-1">
       <form class="needs-validation" novalidate="">
         <div class="row">
-          <div class="col-md-6 mb-3">
+          <div class="col-md-10 mb-3">
             <label for="title"><%= f.input :title %></label>
             <div class="invalid-feedback">
               Le titre est obligatoire.
@@ -44,15 +46,20 @@
           <div class="invalid-feedback">
               L'artiste est obligatoire.
           </div>
+
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Nouvel artiste', new_artist_path %></button>
         </div>
+
 
         <div class="mb-3">
           <label for="address2"><%= f.association :type %></label>
           <div class="invalid-feedback">
               Le type est obligatoire.
           </div>
-        </div>
 
+                <button class="btn btn-sm btn-outline-secondary" ><%= link_to "Nouveau type d'oeuvre", new_type_path %></button>
+        </div>
+        
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="zip"><%= f.association :emotion %></label>
