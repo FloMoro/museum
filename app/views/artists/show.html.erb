@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Prénom:</strong>
-  <%= @artist.first_name %>
-</p>
 
-<p>
-  <strong>Nom:</strong>
-  <%= @artist.last_name %>
-</p>
 
-<%= link_to 'Modifier', edit_artist_path(@artist) %> |
-<%= link_to 'Retour', artists_path %>
+
+      <div class="jumbotron text-white rounded bg-dark">
+        <div class="col-md-12 px-0">
+          <h1 class="display-4 font-italic"><%= @artist.last_name %></h1>
+          <p class="lead my-3">  <%= @artist.first_name %></p>
+        </div>
+      </div>
+  <div class="col-md-10 mb-3">
+    <div class="form-actions">
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Retour', artists_path %></button>
+    </div>
+  </div>
+  <div class="col-md-10 mb-3">
+    <div class="form-actions">
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Modifier', artist_path(@artist) %></button>
+    </div>
+  </div>

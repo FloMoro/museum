@@ -1,48 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Titre:</strong>
-  <%= @art.title %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @art.date %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <a> <%= @art.picture %> </a>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @art.description %>
-</p>
-
-<p>
-  <strong>Artiste:</strong>
-  <%= @art.artist %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @art.type %>
-</p>
-
-<p>
-  <strong>Emotion:</strong>
-  <%= @art.emotion %>
-</p>
-
-
-
-  <div class="col-md-10 mb-3">
-    <div class="form-actions">
-        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Modifier', edit_art_path(@art) %></button>
-    </div>
-  </div>
-
   <div class="col-md-10 mb-3">
     <div class="form-actions">
         <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Retour', arts_path %></button>
@@ -50,6 +7,41 @@
   </div>
 
 
- |
+<div class="container text_align:center">
+  <div class="row mb-2">
+        <div class="col-md-8 ">
+      <div class="jumbotron text-white rounded bg-dark">
+        <div class="col-md-12 px-0">
+            <strong>Tire:</strong>
+          <h1 class="display-4 font-italic"><%= @art.title %></h1>
+            <strong>Date:</strong>
+          <p class="lead my-3"><%= @art.date %></p>
+            <strong>Description:</strong>
+          <p class="lead my-3"><%= @art.description %></p>
+            <strong>Artiste:</strong>
+          <p class="lead my-3"><%= @art.artist %></p>
+            <strong>Type:</strong>
+          <p class="lead my-3"><%= @art.type %></p>
+            <strong>Emotion:</strong>
+          <p class="lead my-3"><%= @art.emotion %></p>
 
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+
+            <strong>Image:</strong>
+          <img class="lead my-3"src="<%= @art.picture %>">
+
+  <div class="col-md-10 mb-3">
+    <div class="form-actions">
+        <button class="btn btn-sm btn-outline-secondary" ><%= link_to 'Modifier', edit_art_path(@art) %></button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+</div>
 
